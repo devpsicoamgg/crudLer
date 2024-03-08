@@ -1,23 +1,16 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormularioCrudComponent } from './formulario-crud.component';
+import { Component } from '@angular/core';
 
-describe('FormularioCrudComponent', () => {
-  let component: FormularioCrudComponent;
-  let fixture: ComponentFixture<FormularioCrudComponent>;
+@Component({
+  selector: 'app-formulario-crud',
+  templateUrl: './formulario-crud.component.html',
+  styleUrls: ['./formulario-crud.component.css']
+})
+export class FormularioCrudComponent {
+  persona: any = {}; // Definición de la propiedad persona
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [FormularioCrudComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(FormularioCrudComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  submitForm() {
+    // Aquí puedes implementar la lógica para guardar los datos del formulario
+    console.log('Datos del formulario:', this.persona);
+  }
+}

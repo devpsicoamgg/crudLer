@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { FormularioCrudComponent } from './formulario-crud/formulario-crud.component';
 
 const routes: Routes = [
-  { path: 'home', component: AppComponent }, 
   { path: 'formulario', component: FormularioCrudComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' } 
+  { path: '', redirectTo: '/formulario', pathMatch: 'full' } 
 ];
 
 @NgModule({
@@ -15,5 +13,3 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-
-export { routes };
